@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// Production backend URL (Vercel deploy)
+// Production backend URL (Vercel)
 const BACKEND_URL = "https://mb-grocery-delta.vercel.app";
 export const API_BASE = `${BACKEND_URL}/api`;
 
