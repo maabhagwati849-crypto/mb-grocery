@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// Production backend URL
-const BACKEND_URL = "https://agile-blessing-production.up.railway.app";
+// Production backend URL (Vercel deploy)
+const BACKEND_URL = "https://mb-grocery-delta.vercel.app";
 export const API_BASE = `${BACKEND_URL}/api`;
 
 const api = axios.create({ baseURL: API_BASE });
