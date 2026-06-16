@@ -1,8 +1,7 @@
 import axios from "axios";
 
-// Yeh line pehle check karegi ki .env file me live Railway ka link hai ya nahi.
-// Agar nahi milega, toh hi localhost:8000 par chalega.
-const BACKEND_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+// Production backend URL
+const BACKEND_URL = "https://agile-blessing-production.up.railway.app";
 export const API_BASE = `${BACKEND_URL}/api`;
 
 const api = axios.create({ baseURL: API_BASE });
