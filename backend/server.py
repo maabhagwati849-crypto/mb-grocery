@@ -7,10 +7,18 @@ from datetime import datetime
 
 app = FastAPI(title="Blinkit Backend")
 
-# CORS
+# ==========================================
+# 🔥 CORS - RAILWAY + LOCALHOST FIX (यही है Fix)
+# ==========================================
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:5174", "http://localhost:3000"],
+    allow_origins=[
+        "https://agile-blessing-production.up.railway.app",  # ✅ YOUR FRONTEND (RAILWAY)
+        "http://localhost:5173",                              # ✅ LOCAL VITE
+        "http://localhost:5174",                              
+        "http://localhost:3000",                              # ✅ LOCAL REACT
+        "https://mb-grocery-production.up.railway.app"       # ✅ BACKEND ITSELF (if needed)
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
